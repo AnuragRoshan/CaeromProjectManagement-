@@ -11,13 +11,10 @@ router.post("/register", (req, res) => {
     const mobile = req.body.mobile;
     const password = req.body.password;
     const github = req.body.github;
-    // const location=req.body.password;
-    // const address = req.body.address;
-    // const pincode = req.body.pincode;
     const dateOfBirth = req.body.dateOfBirth;
-    // res.send(fullName)
     userSchema.findOne({ username: username }, async (err, doc) => {
-        // if(err)throw err;
+        if (err) throw err;
+
         if (!doc) {
             const user = new userSchema({
                 fullName: fullName,
