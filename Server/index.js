@@ -31,12 +31,12 @@ app.use(
 );
 app.use(
     session({
-        secret: "secretcode",
+        secret: process.env.SECRET,
         resave: true,
         saveUninitialized: true,
     })
 );
-app.use(cookieParser("secretcode"));
+app.use(cookieParser(process.env.SECRET));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./config/passportConfig")(passport);
