@@ -1,8 +1,21 @@
-const router = require('express').Router();
+const router = require("express").Router();
+
+const userController = require("../controller/userAPI");
+const projectController = require("../controller/projectAPI");
 
 // console.log("OK");
-router.use('/user', require('../controller/userAPI'));
-router.use('/project', require('../controller/projectAPI'));
-router.use('/task', require('../controller/taskAPI'));
+
+// User Apis
+router.post("/register", userController.registerUser);
+router.post("/login", userController.loginUser);
+router.post("/logedinuser", userController.userDetails);
+router.post("/myProjects", userController.getMyProjects);
+
+// project apis
+router.post("/project/create", projectController.createProject);
+
+// router.post('/user', require('../controller/userAPI/registerUser'));
+// router.use('/project', require('../controller/projectAPI'));
+router.use("/task", require("../controller/taskAPI"));
 
 module.exports = router;
