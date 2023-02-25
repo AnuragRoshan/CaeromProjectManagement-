@@ -41,10 +41,39 @@ exports.createProject = async (req, res, next) => {
       },
       { new: true }
     );
-    return res.status(200).json({ message: "Project updated Successfully", updatedroject });
+    return res
+      .status(200)
+      .json({ message: "Project updated Successfully", updatedroject });
   } else {
     const project = new projectSchema(projectDetail);
     await project.save();
-    return res.status(200).json({ project: project, msg: "Project Added SuccessFully" });
+    return res
+      .status(200)
+      .json({ project: project, msg: "Project Added SuccessFully" });
+  }
+};
+
+exports.addMember = async (req, res) => {
+  try {
+    if (req.user == null) {
+      return res.status(500).json({ message: "user not logged in" });
+    }
+
+    projectId = req.body.projectId;
+    userId = req.body.userId;
+
+    const addMember = await projectSchema.findByIdAndUpdate(
+      projectId,
+      {
+        $push: { memberId: userId },
+      },
+      { new: true }
+    );
+    res.status(200).json({
+      message: "member added",
+      updatedProject: addMember,
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
