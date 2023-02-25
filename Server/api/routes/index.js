@@ -13,6 +13,7 @@ router.post("/myProjects", userController.getMyProjects);
 
 // project apis
 router.post("/project/create", projectController.createProject);
+router.post("/project/addmember", projectController.addMember);
 
 // router.post('/user', require('../controller/userAPI/registerUser'));
 // router.use('/project', require('../controller/projectAPI'));
