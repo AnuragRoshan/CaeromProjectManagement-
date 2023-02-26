@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaHome, FaUser, FaLock, FaMoneyBill, FaBars } from 'react-icons/fa';
 import { MdMessage } from 'react-icons/md';
-import { BiAnalyse, BiSearch, BiCog } from 'react-icons/bi';
+import { BiAnalyse, BiSearch, BiCog, BiLogIn, BiLogOut } from 'react-icons/bi';
 import { AiTwotoneFileExclamation, AiFillHeart } from 'react-icons/ai';
 import { BsCartCheck } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
@@ -29,7 +29,7 @@ const routes = [
         icon: <BiAnalyse />,
     },
     {
-        path: "/file-manager",
+        path: "/fileManager",
         name: "File Manager",
         icon: <AiTwotoneFileExclamation />,
         subRoutes: [
@@ -82,6 +82,16 @@ const routes = [
         path: "/saved",
         name: "Saved",
         icon: <AiFillHeart />,
+    },
+    {
+        path: "/signup",
+        name: "SignUp",
+        icon: <BiLogIn />,
+    },
+    {
+        path: "/signin",
+        name: "SignIn",
+        icon: <BiLogOut />,
     },
 ];
 
