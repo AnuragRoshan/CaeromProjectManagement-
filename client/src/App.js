@@ -9,7 +9,8 @@ import Order from './pages/Order';
 import Settings from './pages/Settings';
 import Users from './pages/Users';
 import Sidebar from './components/Sidebar';
-
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
             <Route path="/saved" element={<Saved />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="*" element={<>Not Found</>} />
           </Routes>
         </Sidebar>
