@@ -18,17 +18,17 @@ function App() {
       <Router>
         <Sidebar>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/fileManager" element={<FileManager />} />
-            <Route path="/messages" element={<Messages />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/saved" element={<Saved />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="*" element={<>Not Found</>} />
+            <Route exact path="/" element={<Dashboard />} />
+            <Route exact path="/analytics" element={<Analytics />} />
+            <Route exact path="/fileManager" element={<FileManager />} />
+            <Route exact path="/messages" element={<Messages />} />
+            <Route exact path="/order" element={<Order />} />
+            <Route exact path="/saved" element={<Saved />} />
+            <Route exact path="/settings" element={<Settings />} />
+            <Route exact path="/users" element={<Users />} />
+            <Route exact path="/signup" element={<SignUp />} />
+            <Route exact path= "/signin" element={<SignIn />} />
+            <Route exact path="*" element={<>Not Found</>} />
           </Routes>
         </Sidebar>
       </Router>

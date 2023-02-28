@@ -93,9 +93,10 @@ const routes = [
         name: "SignIn",
         icon: <BiLogOut />,
     },
+    
 ];
 
-const Sidebar = ({ children }) => {
+const Sidebar = ({children}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -111,8 +112,8 @@ const Sidebar = ({ children }) => {
             },
         },
         show: {
-            width: "140px",
-            padding: "5px 15px",
+            width: "130%",
+            padding: "3% 7%",
             opacity: 1,
             transition: {
                 duration: 0.2,
@@ -141,7 +142,7 @@ const Sidebar = ({ children }) => {
     return (
         <div className="main-container">
             <motion.div animate={{
-                width: isOpen ? '200px' : '37px', transition: {
+                width: isOpen ? '15%' : '5%', transition: {
                     duration: 0.5,
                     type: "spring",
                     damping: 11,
@@ -153,13 +154,13 @@ const Sidebar = ({ children }) => {
                         exit='hidden'
                         variants={showAnimation}
                         className='logo'>Caerom</motion.h1>}
-                    <div className='bars'>
+                    <div style={{alignItems:'center'}} className='bars'>
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
 
                 <div className='search'>
-                    <div className='search-icon'>
+                    <div  style={{textAlign:'center',paddingLeft:"5%", paddingRight:'10%'}}className='search-icon'>
                         <BiSearch />
                     </div>
                     <AnimatePresence>
@@ -177,7 +178,7 @@ const Sidebar = ({ children }) => {
                 <section className='routes'>
                     {routes.map((route) => (
                         <NavLink activeClassName="active" className="link" to={route.path} key={route.name}>
-                            <div className='icon' >{route.icon}</div>
+                            <div style={{alignContent:'center' ,width:'20px' ,marginLeft:'10%'}}className='icon' >{route.icon}</div>
                             <AnimatePresence>
                                 {isOpen &&
                                     <motion.div
