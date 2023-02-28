@@ -60,6 +60,16 @@ exports.getMyProjects = async (req, res, next) => {
   }
 };
 
+exports.getContributingProjects = async (req, res) => {
+  try {
+    contributingProjects = await projectSchema.find({memberId: req.body.userId}).select("_id")
+
+    return res.status(200).json({contributingProjects})
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+};
+
 exports.userDetails = (req, res) => {
   res.send(req.user); // The req.user stores the entire user that has been authenticated inside of it.
 };
