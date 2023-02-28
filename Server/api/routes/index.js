@@ -10,6 +10,7 @@ router.post("/register", userController.registerUser);
 router.post("/login", userController.loginUser);
 router.post("/logedinuser", userController.userDetails);
 router.post("/myProjects", userController.getMyProjects);
+router.post("/contributingProjects", userController.getContributingProjects);
 
 // project apis
 router.post("/project/create", projectController.createProject);
