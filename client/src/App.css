@@ -2,16 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-a,a::after,a::before {
+a,
+a::after,
+a::before {
   text-decoration: none;
-  color:initial;
+  color: initial;
 }
 
 .main-container {
   display: flex;
-
 }
 
 .main {
@@ -22,12 +24,10 @@ a,a::after,a::before {
   font-size: 30px;
 }
 
-
 .sidebar {
   background: rgb(0, 7, 61);
   color: white;
   height: 100vh;
-
 }
 
 .top_section {
@@ -64,20 +64,17 @@ a,a::after,a::before {
   padding: 5px 10px;
   border-right: 4px solid transparent;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-
 }
 
 .link:hover {
   border-right: 4px solid white;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   background: rgb(45, 51, 89);
-
 }
 
 .active {
   border-right: 4px solid white;
   background: rgb(45, 51, 89);
-
 }
 
 .link-text {
@@ -97,7 +94,6 @@ a,a::after,a::before {
   height: 100vh;
   width: 100vw;
   background-color: #f8f8f8;
- 
 }
 
 .lgn-box {
@@ -108,66 +104,163 @@ a,a::after,a::before {
   width: 55vw;
   height: 75vh;
   border-radius: 5%;
-  background-color:white;
-
+  background-color: white;
 }
 
-.vecImage{
+.vecImage {
   display: flex;
   justify-content: space-between;
-  flex-direction: column ;
+  flex-direction: column;
 }
 
-.signUp{
+.signUp {
   display: flex;
-  height:60vh;
-  width:23vw;
+  height: 60vh;
+  width: 23vw;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.signIn{
+.signIn {
   display: flex;
-  height:60vh;
-  width:23vw;
+  height: 60vh;
+  width: 23vw;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.lgn-form
-{
+.lgn-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.lgn-input{
+.lgn-input {
   padding-left: 1vw;
   font-size: 1.8vh;
-  border:none;
-  width:20vw;
-  height:5vh;
+  border: none;
+  width: 20vw;
+  height: 5vh;
 }
 
-.lgn-input:focus{
+.lgn-input:focus {
   outline: none;
 }
 
-.btn{
-width:10vw;
-height:6.5vh;
-border-radius: 0.6rem;
-background-color: #6dabe4;
-border:none;
-color:white;
+.btn {
+  width: 10vw;
+  height: 6.5vh;
+  border-radius: 0.6rem;
+  background-color: #6dabe4;
+  border: none;
+  color: white;
 }
 
-
-.auth{
+.auth {
   display: flex;
   flex-direction: row;
 }
 
-.auth>div{
+.display-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.auth > div {
   margin-left: 1vw;
 }
+
+/* project form css ------------------- */
+.projectForm {
+  padding-inline: 8rem;
+  /* padding-block: 1rem; */
+  background-color: #f0f3fa;
+  font-family: Inter, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  height: 100vh;
+}
+.projectF-head {
+  padding: 1rem;
+  font-weight: 600;
+}
+.projectF-form {
+  position: relative;
+  padding: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 6px rgb(0 0 0 / 30%);
+  border-radius: 0.5rem;
+  opacity: 0.94;
+  z-index: 2;
+}
+.projectF-title {
+  padding-block: 1rem;
+}
+.projectF-Horizontal-section {
+  display: flex;
+  flex-direction: row;
+}
+.section {
+  flex: 1;
+  padding: 0.5rem;
+}
+.projectF-Input {
+  padding: 0.8rem;
+}
+.projectF-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.projectF-LabelSection {
+  margin: auto 10px auto 0;
+  width: 28%;
+  color: rgba(58, 53, 65, 0.54);
+  font-weight: 550;
+}
+.projectF-InputSection {
+  flex: 7;
+}
+
+input {
+  outline: none;
+  margin-block: 0.5rem;
+  font-size: medium;
+  padding: 0.5rem;
+  border: 1px solid #cdd3df;
+  border-radius: 0.2rem;
+}
+hr {
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 0.1px solid #e2e6ee;
+  margin: 2px 0 1px 0;
+  height: 0;
+}
+.addMember-Top {
+  box-shadow: 0 0 6px rgb(0 0 0 / 30%);
+  padding-inline: 1rem;
+}
+.searchIco {
+  font-size: 1.5rem;
+  margin: "auto 10px ";
+}
+.searchIco:hover {
+  background-color: rgb(165, 173, 165);
+  margin-left: 0%;
+}
+.projectTop {
+}
+.ql-toolbar {
+  padding: "0px";
+}
+
+.addedUser {
+  margin-inline-end: 20px;
+  padding-inline: 5px;
+  padding-block: 3px;
+  border-radius: 5px;
+  color: black;
+  /* border: 1px solid black; */
+}
+/* project form css End ------------------- */
