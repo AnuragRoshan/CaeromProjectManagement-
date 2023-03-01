@@ -1,7 +1,7 @@
 
 const Users = () => {
   return (
-    <div className="title">Users</div>
+    <div className="title" style={{backgroundColor:"red"}}>Users</div>
   )
 }
 
