@@ -6,13 +6,15 @@ import {
   FaUser,
 } from "react-icons/fa";
 
+import "../Assets/css/signin.css";
+
 const SignIn = () => {
   const onLogin = () => {};
 
   return (
-    <div className="login">
-      <div className="lgn-box">
-        <div className="vecImage">
+    <div className="si_login">
+      <div className="si_lgn-box">
+        <div className="si_vecImage">
           <div style={{ textAlign: "center" }}>
             <img
               style={{ maxWidth: "80%", height: "auto" }}
@@ -46,7 +48,7 @@ const SignIn = () => {
           >
             Sign In
           </div>
-          <div className="lgn-form">
+          <div className="si_lgn-form">
             <form action="" method="post">
               <div
                 style={{
@@ -56,19 +58,18 @@ const SignIn = () => {
                   margin: "7% 0",
                 }}
               >
-        
-                  <FaUser
-                    style={{
-                      maxWidth: "20%",
-                    }}
-                  />
-                  <input
-                    style={{ borderBottom: "1px solid #999" }}
-                    className="lgn-input"
-                    type="text"
-                    placeholder="Your Name"
-                  />
-                </div>
+                <FaUser
+                  style={{
+                    maxWidth: "20%",
+                  }}
+                />
+                <input
+                  style={{ borderBottom: "1px solid #999" }}
+                  className="si_lgn-input"
+                  type="text"
+                  placeholder="Your Name"
+                />
+              </div>
               <div
                 style={{
                   margin: "7% 0",
@@ -77,20 +78,20 @@ const SignIn = () => {
                   alignItems: "center",
                 }}
               >
-                  <FaLock
-                    style={{
-                      maxWidth: "20%",
-                      paddingTop: "1%",
-                    }}
-                  />
-                  <input
-                    style={{ borderBottom: "1px solid #999" }}
-                    className="lgn-input"
-                    type="password"
-                    placeholder="Password"
-                  />
+                <FaLock
+                  style={{
+                    maxWidth: "20%",
+                    paddingTop: "1%",
+                  }}
+                />
+                <input
+                  style={{ borderBottom: "1px solid #999" }}
+                  className="si_lgn-input"
+                  type="password"
+                  placeholder="Password"
+                />
               </div>
-              <div style={{ marginTop: "5vh",textAlign:'center' }}>
+              <div style={{ marginTop: "5vh", textAlign: "center" }}>
                 <button type="submit" className="btn" onClick={onLogin}>
                   Log in
                 </button>
