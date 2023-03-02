@@ -7,6 +7,9 @@ import { AiTwotoneFileExclamation, AiFillHeart } from 'react-icons/ai';
 import { BsCartCheck } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+
+import '../Assets/css/sidebar.css';
+
 const routes = [
     {
         path: "/",

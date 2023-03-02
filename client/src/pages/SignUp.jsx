@@ -1,11 +1,13 @@
 import { FaEnvelope, FaLock, FaLockOpen, FaUser } from "react-icons/fa";
 
+import '../Assets/css/signup.css';
+
 const SignUp = () => {
   const onRegister = () => {};
 
   return (
-    <div className="login">
-      <div className="lgn-box">
+    <div className="su_login">
+      <div className="su_lgn-box">
         <div className="signUp">
           <div
             style={{
@@ -18,7 +20,7 @@ const SignUp = () => {
           >
             Sign Up
           </div>
-          <div className="lgn-form">
+          <div className="su_lgn-form">
             <form action="" method="post">
               <div
                 style={{
@@ -36,7 +38,7 @@ const SignUp = () => {
                 />
                 <input
                   style={{ borderBottom: "1px solid #999" }}
-                  className="lgn-input"
+                  className="su_lgn-input"
                   type="text"
                   placeholder="Your Name"
                 />
@@ -45,7 +47,7 @@ const SignUp = () => {
                 style={{
                   margin: "7% 0",
                   display: "flex",
-                  justifyContent:"space-between" ,
+                  justifyContent: "space-between",
                   alignItems: "center",
                 }}
               >
@@ -57,7 +59,7 @@ const SignUp = () => {
                 />
                 <input
                   style={{ borderBottom: "1px solid #999" }}
-                  className="lgn-input"
+                  className="su_lgn-input"
                   type="text"
                   placeholder="Your Email"
                 />
@@ -78,7 +80,7 @@ const SignUp = () => {
                 />
                 <input
                   style={{ borderBottom: "1px solid #999" }}
-                  className="lgn-input"
+                  className="su_lgn-input"
                   type="password"
                   placeholder="Password"
                 />
@@ -99,7 +101,7 @@ const SignUp = () => {
                 />
                 <input
                   style={{ borderBottom: "1px solid #999" }}
-                  className="lgn-input"
+                  className="su_lgn-input"
                   type="password"
                   placeholder="Repeat Your Password"
                 />
@@ -110,7 +112,7 @@ const SignUp = () => {
                   marginTop: "10vh",
                   marginBottom: "5vh",
                 }}
-              >
+              >=
                 <button type="submit" className="btn" onClick={onRegister}>
                   Register
                 </button>
@@ -118,7 +120,7 @@ const SignUp = () => {
             </form>
           </div>
         </div>
-        <div className="vecImage">
+        <div className="su_vecImage">
           <div style={{ textAlign: "center" }}>
             <img
               style={{ maxWidth: "80%", height: "auto" }}
