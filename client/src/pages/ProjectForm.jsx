@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../Assets/css/projectForm.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import AddProjectMember from "../components/AddProjectMember";
@@ -13,6 +13,7 @@ const ProjectForm = () => {
   return (
     <div className="projectTop">
       <img
+        alt=""
         style={{
           position: "absolute",
           width: "20rem",
@@ -22,6 +23,7 @@ const ProjectForm = () => {
         src={bgimg}
       ></img>
       <img
+        alt=""
         style={{
           position: "absolute",
           width: "20rem",
@@ -39,15 +41,15 @@ const ProjectForm = () => {
           <div className="projectF-Horizontal-section">
             <div className="section">
               <div className="projectF-section">
-                <div className="display-flex-row">
-                  <div className="projectF-LabelSection">Project Name :</div>
+                <div className="display-flex-row label-and-input">
+                  <div className="projectF-LabelSection ">Project Name :</div>
                   <input
                     type="text"
                     style={{ width: "80%" }}
                     placeholder="Project Name"
                   />
                 </div>
-                <div className="display-flex-row">
+                <div className="display-flex-row label-and-input">
                   <div className="projectF-LabelSection"> Github :</div>
                   <input
                     style={{ width: "80%" }}
@@ -56,35 +58,26 @@ const ProjectForm = () => {
                   />
                 </div>
               </div>
-              <div className="display-flex-row">
-                <div className="projectF-LabelSection">Start Date :</div>
-                <input type="date" style={{ width: "25%" }} />
+              <div className="display-flex-row label-and-input">
+                <div className="projectF-LabelSection ">Start Date :</div>
+                <input className="date" type="date" style={{ width: "25%" }} />
               </div>
-              <div className="display-flex-row">
+              <div className="display-flex-row label-and-input">
                 <div className="projectF-LabelSection">End Date :</div>
-                <input type="date" style={{ width: "25%" }} />
+                <input className="date" type="date" style={{ width: "25%" }} />
               </div>
-              <div className="display-flex-row">
+              <div className="display-flex-row label-and-input">
                 <div className="projectF-LabelSection"> Duration :</div>
                 <input
+                  className="date"
                   style={{ width: "25%" }}
                   type="text"
                   placeholder="in hour(s)"
                 />
               </div>
-              <div className="display-flex-row">
+              <div className="display-flex-row label-and-input">
                 <div className="projectF-LabelSection"> Status :</div>
-                <div
-                  style={{
-                    padding: "0.2rem",
-                    backgroundColor: "#50b83c",
-                    color: "white",
-                    marginBlock: "1rem",
-                    borderRadius: "5px",
-                  }}
-                >
-                  In Progress
-                </div>
+                <div className="progress-status">In Progress</div>
               </div>
             </div>
             <div className="section">
@@ -92,7 +85,7 @@ const ProjectForm = () => {
                 <ReactQuill
                   style={{
                     height: "8rem",
-                    marginBlockStart: "1rem",
+                    marginBlockStart: "0.5rem",
                   }}
                   theme="snow"
                   placeholder="Description"

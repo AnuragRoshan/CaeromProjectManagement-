@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import "../App.css";
+import React from "react";
+import "../Assets/css/projectForm.css";
 import "react-select-search/style.css";
 import { FaSearch } from "react-icons/fa";
-import Pager from "react-pager";
 
-import { render } from "react-dom";
 const Searched = (props) => {
   return (
     <>
       <div
         className="display-flex-row"
         style={{
-          width: "100%",
+          width: "90%",
           bottom: "0px",
           padding: "0.2rem",
           position: "relative",
@@ -62,7 +60,7 @@ const Searched = (props) => {
   );
 };
 const ProjectMember = (props) => {
-  const addedUser = props.addedUser;
+  // const addedUser = props.addedUser;
   return (
     <div>
       <div
@@ -91,7 +89,7 @@ const AddProjectMember = () => {
       college: "Chandigarh University",
     },
   ];
-  const name = "anurag";
+  // const name = "anurag";
   // console.log(searchedUser.name);
   let AddedUser = [
     { name: "anurag", userName: "12" },
@@ -117,7 +115,7 @@ const AddProjectMember = () => {
         </div>
         <div className="display-flex-row" style={{ flex: "5" }}>
           <input
-            style={{ width: "100%", borderRadius: "5px" }}
+            style={{ width: "330%", borderRadius: "5px" }}
             type="text"
             name=""
             id=""
@@ -126,7 +124,7 @@ const AddProjectMember = () => {
           <div
             className="searchIco"
             style={{
-              margin: "auto 10px auto 10px",
+              margin: "auto 0px auto 0px",
             }}
           >
             <FaSearch />

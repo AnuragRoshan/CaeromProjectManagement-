@@ -28,8 +28,8 @@ function App() {
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/users" element={<Users />} />
             <Route exact path="/signup" element={<SignUp />} />
-            <Route exact path= "/signin" element={<SignIn />} />
-          <Route path="/project/modify" element={<ProjectForm />} />
+            <Route exact path="/signin" element={<SignIn />} />
+            <Route path="/project/modify" element={<ProjectForm />} />
             <Route exact path="*" element={<>Not Found</>} />
           </Routes>
         </Sidebar>
