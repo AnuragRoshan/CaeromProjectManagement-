@@ -12,6 +12,7 @@ const userSchema = mongoose.Schema(
         },
         companyName: { type: String, required: true },
         mobile: { type: String, required: true },
+        // bookmarkedProject: {},
 
         password: { type: String, required: true },
         github: { type: String, required: true },

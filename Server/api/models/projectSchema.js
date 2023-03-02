@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 // import userSchema from ("./user")
 const projectSchema = mongoose.Schema(
     {
-        projectId: { type: String, required: true },
         projectName: {
             type: String,
             required: true,

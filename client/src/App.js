@@ -11,6 +11,7 @@ import Users from './pages/Users';
 import Sidebar from './components/Sidebar';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import ProjectForm from './pages/ProjectForm';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/users" element={<Users />} />
             <Route exact path="/signup" element={<SignUp />} />
             <Route exact path= "/signin" element={<SignIn />} />
+          <Route path="/project/modify" element={<ProjectForm />} />
             <Route exact path="*" element={<>Not Found</>} />
           </Routes>
         </Sidebar>
