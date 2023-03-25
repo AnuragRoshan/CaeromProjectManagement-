@@ -1,0 +1,20 @@
+.project-top {
+  background-color: #f8f8f8;
+  height: 100%;
+}
+
+.float-left {
+  float: left;
+}
+.box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sec {
+  width: fit-content;
+  margin-right: 3rem;
+}
+.sec:active {
+  border-bottom: 2px solid black;
+}

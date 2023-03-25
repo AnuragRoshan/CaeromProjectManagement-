@@ -3,6 +3,7 @@ import "../Assets/css/projectForm.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import AddProjectMember from "../components/AddProjectMember";
+import { color } from "framer-motion";
 const bgimg =
   "https://www.govqa.com/wp-content/uploads/2020/10/Vector-Smart-Object-copy-e1604094179537-400x269.png";
 const bgimg2 =
@@ -12,13 +13,14 @@ const bgimg2 =
 const ProjectForm = () => {
   return (
     <div className="projectTop">
-      <img
+      {/* <img
         alt=""
         style={{
           position: "absolute",
           width: "20rem",
           bottom: "0px",
           left: "0px",
+          opacity: "0.6",
         }}
         src={bgimg}
       ></img>
@@ -32,12 +34,11 @@ const ProjectForm = () => {
           opacity: "0.6",
         }}
         src={bgimg2}
-      ></img>
+      ></img> */}
       <div className="projectForm">
         <div className="projectF-head">New Project</div>
         <div className="projectF-form">
           <div className="projectF-title">Project Data</div>
-          <hr />
           <div className="projectF-Horizontal-section">
             <div className="section">
               <div className="projectF-section">
@@ -59,7 +60,7 @@ const ProjectForm = () => {
                 </div>
               </div>
               <div className="display-flex-row label-and-input">
-                <div className="projectF-LabelSection ">Start Date :</div>
+                <div className="projectF-LabelSection  ">Start Date :</div>
                 <input className="date" type="date" style={{ width: "25%" }} />
               </div>
               <div className="display-flex-row label-and-input">

@@ -4,19 +4,19 @@ const localStrategy = require("passport-local").Strategy;
 
 module.exports = function (passport) {
   passport.use(
-    new localStrategy(async (username, password, done) => {
-      try {
-        const user = await User.findOne({ username });
-
-        if (!user) {
-          return done(null, false, { message: "User not found." });
-        }
-        if (user.password !== password)
-          return done(null, false, { message: "Incorrrect Password" });
-        return done(null, user);
-      } catch (err) {
-        return done(err, false);
-      }
+    new localStrategy((username, password, done) => {
+      User.findOne({ username: username }, (err, user) => {
+        if (err) throw err;
+        if (!user) return done(null, false);
+        bcrypt.compare(password, user.password, (err, result) => {
+          if (err) throw err;
+          if (result === true) {
+            return done(null, user);
+          } else {
+            return done(null, false);
+          }
+        });
+      });
     })
   );
 
