@@ -1,7 +1,20 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import "../Assets/css/project.css";
+import ProjectPanel1 from "./ProjectPanel1";
+import ProjectPanel2 from "./ProjectPanel2";
+import ProjectPanel3 from "./ProjectPanel3";
 
 const Projects = () => {
+  const[projectPage,setProjectPage]=useState(0);
+  
+
+
+  useEffect(()=>{
+   
+  },[]);
+
   return (
     <div
       className="project-top"
@@ -35,96 +48,15 @@ const Projects = () => {
             }}
             className="box"
           >
-            <div className="sec">Project</div>
-            <div className="sec">Project TimeLine</div>
-            <div className="sec">Project Option 2</div>
+            <div className="sec"><span onClick={() => setProjectPage(0)} value="Project">Project</span></div>
+            <div className="sec"><span onClick={() => setProjectPage(1)} value="Project TimeLine">Project TimeLine</span></div>
+            <div className="sec"><span onClick={() => setProjectPage(2)} value="Project Option 2">Project Option 2</span></div>
           </div>
 
           <hr style={{ marginInlineStart: "1rem" }} />
-          <div
-            style={{
-              paddingInline: "1rem",
-              paddingBlockStart: "1rem",
-              display: "flex",
-            }}
-          >
-            <div
-              className="btn"
-              style={{
-                width: "fit-content",
-                height: "fit-content",
-                marginRight: "2rem",
-                marginTop: "0 ",
-                padding: "0.5rem",
-                backgroundColor: "black",
-                fontSize: "0.8rem",
-              }}
-            >
-              New Project
-            </div>
-            <div
-              className="btn"
-              style={{
-                width: "fit-content",
-                height: "fit-content",
-                marginRight: "2rem",
-                marginTop: "0 ",
-                padding: "0.5rem",
-                backgroundColor: "black",
-                fontSize: "0.8rem",
-              }}
-            >
-              Bookmark
-            </div>
-            <div
-              className="btn"
-              style={{
-                width: "fit-content",
-                height: "fit-content",
-                marginRight: "2rem",
-                marginTop: "0 ",
-                padding: "0.5rem",
-                backgroundColor: "black",
-                fontSize: "0.8rem",
-              }}
-            >
-              My Projects
-            </div>
-            <input
-              type="text"
-              style={{
-                width: "fit-content",
-                marginRight: "0px",
-                textDecoration: "none",
-              }}
-              name=""
-              id=""
-            />
-          </div>
-          <div
-            style={{
-              paddingInline: "1rem",
-              paddingBlockStart: "1rem",
-            }}
-          >
-            <table>
-              <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-              </tr>
-              <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-              </tr>
-              <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-              </tr>
-            </table>
-          </div>
+          {projectPage===0 && <ProjectPanel1/>}
+          {projectPage===1 && <ProjectPanel2/>}
+          {projectPage===2 && <ProjectPanel3/>}
         </div>
       </div>
     </div>

@@ -18,3 +18,18 @@
 .sec:active {
   border-bottom: 2px solid black;
 }
+
+table{
+  border-collapse: collapse;
+  border:1px solid;
+}
+
+tr,th{
+  width:100%;
+  border:1px solid;
+}
+td{
+  width:10%;
+  text-align: center;
+  border:1px solid;
+}
