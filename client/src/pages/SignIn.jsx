@@ -44,7 +44,7 @@ const Second = () => {
   );
 };
 
-const Saved = () => {
+const SignIn = () => {
   const [showComponent1, setShowComponent1] = useState(true);
 
   const handleButtonClick = () => {
@@ -121,4 +121,4 @@ const Saved = () => {
   );
 };
 
-export default Saved;
+export default SignIn;

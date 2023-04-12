@@ -40,7 +40,7 @@ const Projects = () => {
             <div className="sec">Project Option 2</div>
           </div>
 
-          <hr style={{ marginInlineStart: "1rem" }} />
+          {/* <hr style={{ marginInlineStart: "1rem" }} /> */}
           <div
             style={{
               paddingInline: "1rem",

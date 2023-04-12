@@ -15,6 +15,6 @@
   width: fit-content;
   margin-right: 3rem;
 }
-.sec:active {
+.sec:hover {
   border-bottom: 2px solid black;
 }
