@@ -121,8 +121,8 @@ const Sidebar = ({ children }) => {
       },
     },
     show: {
-      width: "130%",
-      padding: "3% 7%",
+      width: "12vw",
+      padding: "2vw 5vw",
       opacity: 1,
       transition: {
         duration: 0.2,
@@ -151,7 +151,7 @@ const Sidebar = ({ children }) => {
     <div className="main-container">
       <motion.div
         animate={{
-          width: isOpen ? "20%" : "5%",
+          width: isOpen ? "10vw" : "5vw",
           transition: {
             duration: 0.5,
             type: "spring",
@@ -175,8 +175,8 @@ const Sidebar = ({ children }) => {
           <div
             style={{
               alignItems: "center",
-              marginInlineStart: "1rem",
-              margin: "1rem auto",
+              marginInlineStart: "1vh",
+              margin: "1vh auto",
             }}
             className="bars"
           >
@@ -219,8 +219,8 @@ const Sidebar = ({ children }) => {
               <div
                 style={{
                   textAlign: "center",
-                  width: "20px",
-                  marginLeft: "10%",
+                  width: "20vw",
+                  marginLeft: "2vw",
                   margin: "0 auto 0 auto",
                 }}
                 className="icon"

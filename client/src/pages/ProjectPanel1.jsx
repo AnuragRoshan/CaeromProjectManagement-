@@ -1,6 +1,8 @@
 import React from "react";
 
 const ProjectPanel1 = () => {
+
+
   return (
     <div>
       <div
@@ -58,9 +60,8 @@ const ProjectPanel1 = () => {
           style={{
             width: "fit-content",
             textDecoration: "none",
-            marginLeft: "55%",
-            alignSelf: "right",
-            textAlign: "right",
+            position:'absolute',
+            right:'5vw',
           }}
           name=""
           id=""
@@ -72,40 +73,97 @@ const ProjectPanel1 = () => {
           paddingBlockStart: "1rem",
         }}
       >
-        <table style={{ tableLayout: "fixed" }}>
-          <tr>
-            <th style={{ width: "20%" }}>#</th>
-            <th>Project Name</th>
-            <th>Due Date</th>
-            <th>Status</th>
-            <th>Order</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-          </tr>
-        </table>
+        <div style={{overflow:'scroll',overflowY:'hidden',height:'100%'}}>
+          <table
+            style={{
+              tableLayout: "fixed",
+              cellPadding: "0",
+              cellSpacing: "0",
+              groupView: "false",
+              stickLeft: "true",
+            }}
+          >
+            <tr>
+              <th style={{ width: "5vw"}}>#</th>
+              <th style={{ width: "20vw"}}>Project Name</th>
+              <th style={{ width: "2vw"}}>%</th>
+              <th style={{ width: "10vw"}}>Owner</th>
+              <th style={{ width: "15vw"}}>Status</th>
+              <th style={{ width: "12vw"}}>Tasks</th>
+              <th style={{ width: "12vw"}}>MileStones</th>
+              <th style={{ width: "12vw"}}>StartDate</th>
+              <th style={{ width: "12vw"}}>EndDate</th>
+              <th style={{ width: "12vw"}}>Completed On</th>
+              <th style={{ width: "12vw"}}>Layout</th>
+              <th style={{ width: "12vw"}}>Group Name</th>
+              <th style={{ width: "12vw"}}>Tags</th>
+              <th style={{ width: "12vw"}}>Created On</th>
+              <th style={{ width: "12vw"}}>Last Modified</th>
+              <th style={{ width: "12vw"}}>Created By</th>
+              <th style={{ width: "12vw"}}>Modified By</th>
+
+
+
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>Standard Layout</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+              <td>a</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );
