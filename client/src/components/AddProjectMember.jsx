@@ -100,7 +100,10 @@ const AddProjectMember = () => {
     { name: "av", userName: "82" },
   ];
   return (
-    <div className="addMember-Top" style={{ height: "15rem" }}>
+    <div
+      className="addMember-Top"
+      style={{ height: "15rem", paddingInline: "0.3rem" }}
+    >
       <div className="display-flex-row">
         <div
           className="projectF-LabelSection"
@@ -115,7 +118,7 @@ const AddProjectMember = () => {
         </div>
         <div className="display-flex-row" style={{ flex: "5" }}>
           <input
-            style={{ width: "330%", borderRadius: "5px" }}
+            className="projectFaddMember-input"
             type="text"
             name=""
             id=""

@@ -8,7 +8,7 @@ const projectController = require("../controller/projectAPI");
 // User Apis
 router.post("/register", userController.registerUser);
 router.post("/login", userController.loginUser);
-router.post("/logedinuser", userController.userDetails);
+router.get("/logedinuser", userController.userDetails);
 router.post("/myProjects", userController.getMyProjects);
 router.post("/contributingProjects", userController.getContributingProjects);
 

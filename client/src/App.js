@@ -5,13 +5,13 @@ import Dashboard from './pages/Dashboard';
 import FileManager from './pages/FileManager';
 import Messages from './pages/Messages';
 import Saved from './pages/Saved';
-import Order from './pages/Order';
 import Settings from './pages/Settings';
 import Users from './pages/Users';
 import Sidebar from './components/Sidebar';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import ProjectForm from './pages/ProjectForm';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/analytics" element={<Analytics />} />
             <Route exact path="/fileManager" element={<FileManager />} />
             <Route exact path="/messages" element={<Messages />} />
-            <Route exact path="/order" element={<Order />} />
+            <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/saved" element={<Saved />} />
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/users" element={<Users />} />

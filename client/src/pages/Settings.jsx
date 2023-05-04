@@ -1,7 +1,8 @@
+import React from 'react'
 
 const Settings = () => {
   return (
-    <div className="title">Settings</div>
+    <div>Settings</div>
   )
 }
 

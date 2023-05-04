@@ -4,12 +4,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   width: 100%;
+  /* background-color: #f0f3fa; */
 }
-
 a,
 a::after,
 a::before {
   text-decoration: none;
   color: initial;
 }
-

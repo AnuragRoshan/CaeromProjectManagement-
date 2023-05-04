@@ -31,9 +31,10 @@ app.use(
 );
 app.use(
     session({
-        secret: process.env.SECRET,
+        secret: "secretcode",
         resave: true,
         saveUninitialized: true,
+        cookie: { secure: false, maxAge: 60 * 60 * 1000, prioroty: "Low" }
     })
 );
 app.use(cookieParser(process.env.SECRET));

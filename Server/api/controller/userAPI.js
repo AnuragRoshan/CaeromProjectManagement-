@@ -2,13 +2,14 @@ const router = require("express").Router();
 const passport = require("passport");
 const userSchema = require("../models/user");
 const projectSchema = require("../models/projectSchema");
+const bcrypt = require("bcryptjs");
 
-exports.registerUser = (req, res) => {
+exports.registerUser = async (req, res) => {
   const fullName = req.body.fullName;
   const username = req.body.username;
   const companyName = req.body.companyName;
   const mobile = req.body.mobile;
-  const password = req.body.password;
+  const password = await bcrypt.hash(req.body.password, 10);
   const github = req.body.github;
   const dateOfBirth = req.body.dateOfBirth;
   userSchema.findOne({ username: username }, async (err, doc) => {
@@ -34,12 +35,12 @@ exports.registerUser = (req, res) => {
 
 exports.loginUser = (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
-    if (err) throw err;
-    if (!user) return res.send({ message: info.message });
+    if (err) res.send({ status: "500", message: "Try Again Later" });
+    else if (!user) return res.send({ status: "202", message: "wrong cred" });
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
-        res.send("Successfully Authenticated");
+        res.send({ status: "200", message: "Autheticated " });
         console.log(req.user.fullName);
       });
     }
@@ -62,9 +63,9 @@ exports.getMyProjects = async (req, res, next) => {
 
 exports.getContributingProjects = async (req, res) => {
   try {
-    contributingProjects = await projectSchema.find({memberId: req.body.userId}).select("_id")
+    contributingProjects = await projectSchema.find({ memberId: req.body.userId }).select("_id")
 
-    return res.status(200).json({contributingProjects})
+    return res.status(200).json({ contributingProjects })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
