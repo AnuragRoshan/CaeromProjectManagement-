@@ -1,8 +1,8 @@
 import React from "react";
-import "../Assets/css/projectForm.css";
+import "../../Assets/css/projectForm.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import AddProjectMember from "../components/AddProjectMember";
+import AddProjectMember from "../../components/AddProjectMember";
 import { color } from "framer-motion";
 const bgimg =
   "https://www.govqa.com/wp-content/uploads/2020/10/Vector-Smart-Object-copy-e1604094179537-400x269.png";
